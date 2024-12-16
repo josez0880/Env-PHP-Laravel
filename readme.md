@@ -46,6 +46,10 @@ proyecto/
 
 ## Comandos Útiles
 
+- Crear un nuevo proyecto Laravel:
+  ```bash
+  docker exec -it web composer create-project --prefer-dist laravel/laravel .
+  ```
 - Detener los contenedores:
   ```bash
   docker compose down
