@@ -27,6 +27,10 @@ RUN docker-php-ext-install pdo_mysql mbstring exif pcntl bcmath gd zip gettext
 RUN docker-php-ext-configure gd --enable-gd --with-freetype --with-jpeg \
     && docker-php-ext-install -j$(nproc) gd
 
+# Instalar y configurar OPcache
+RUN docker-php-ext-install opcache
+COPY opcache.ini /usr/local/etc/php/conf.d/opcache.ini
+
 # Configurar Apache
 COPY apache.conf /etc/apache2/sites-available/000-default.conf
 RUN echo "ServerName localhost" >> /etc/apache2/apache2.conf

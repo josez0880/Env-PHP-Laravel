@@ -67,6 +67,12 @@ proyecto/
 
 - Asegúrate de que los puertos 8080 y 8081 estén disponibles en tu máquina local.
 - Si realizas cambios en el `Dockerfile` o en los archivos de configuración, recuerda reconstruir la imagen con `docker compose build`.
+- Desactivdar el wsl2 de docker desktop por caracterisitcas de windows y luego por powershell 
+
+```bash
+  Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V -All
+```	
+
 
 ## Contribuciones
 
